@@ -110,7 +110,7 @@ if (isset($_SESSION['flash_error'])) {
     <?php if ($flash_error): ?>
         <div class="flash-error"><?php echo htmlentities($flash_error); ?></div>
     <?php endif; ?>
-    <form method="POST" action="/edit">
+    <form method="POST" action="/edit.php">
         <input type="hidden" name="profile_id" value="<?php echo intval($profile['profile_id']); ?>">
 
         <label for="first_name">First Name</label>

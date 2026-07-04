@@ -81,7 +81,7 @@ if ($profile['user_id'] != $_SESSION['user_id']) {
         <p><span class="field-label">Headline:</span>
             <?php echo htmlentities($profile['headline']); ?></p>
     </div>
-    <form method="POST" action="/delete">
+    <form method="POST" action="/delete.php">
         <input type="hidden" name="profile_id" value="<?php echo intval($profile['profile_id']); ?>">
         <button type="submit" class="btn-delete">Yes, Delete This Profile</button>
         <a class="btn-cancel" href="/">Cancel</a>

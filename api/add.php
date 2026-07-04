@@ -74,7 +74,7 @@ if (isset($_SESSION['flash_error'])) {
     <?php if ($flash_error): ?>
         <div class="flash-error"><?php echo htmlentities($flash_error); ?></div>
     <?php endif; ?>
-    <form method="POST" action="/add">
+    <form method="POST" action="/add.php">
         <label for="first_name">First Name</label>
         <input type="text" name="first_name" id="first_name">
 

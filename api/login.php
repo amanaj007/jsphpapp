@@ -91,7 +91,7 @@ if (isset($_SESSION['flash_error'])) {
     <?php if ($flash_error): ?>
         <div class="flash-error"><?php echo htmlentities($flash_error); ?></div>
     <?php endif; ?>
-    <form method="POST" action="/login">
+    <form method="POST" action="/login.php">
         <label for="id_email">Email Address</label>
         <input type="text" name="email" id="id_email" placeholder="you@example.com">
 

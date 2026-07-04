@@ -5,6 +5,12 @@
     }
   },
   "rewrites": [
+    { "source": "/login.php",   "destination": "/api/login.php" },
+    { "source": "/logout.php",  "destination": "/api/logout.php" },
+    { "source": "/add.php",     "destination": "/api/add.php" },
+    { "source": "/view.php",    "destination": "/api/view.php" },
+    { "source": "/edit.php",    "destination": "/api/edit.php" },
+    { "source": "/delete.php",  "destination": "/api/delete.php" },
     { "source": "/login",   "destination": "/api/login.php" },
     { "source": "/logout",  "destination": "/api/logout.php" },
     { "source": "/add",     "destination": "/api/add.php" },

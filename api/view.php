@@ -62,8 +62,8 @@ if ($profile === false) {
 
     <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $profile['user_id']): ?>
     <div class="actions">
-        <a class="btn-edit" href="/edit?profile_id=<?php echo intval($profile['profile_id']); ?>">Edit</a>
-        <a class="btn-delete" href="/delete?profile_id=<?php echo intval($profile['profile_id']); ?>">Delete</a>
+        <a class="btn-edit" href="/edit.php?profile_id=<?php echo intval($profile['profile_id']); ?>">Edit</a>
+        <a class="btn-delete" href="/delete.php?profile_id=<?php echo intval($profile['profile_id']); ?>">Delete</a>
     </div>
     <?php endif; ?>
 </div>
