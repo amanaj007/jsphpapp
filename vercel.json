@@ -4,14 +4,13 @@
       "runtime": "vercel-php@0.7.2"
     }
   },
-  "routes": [
-    { "src": "/api/(.*\\.php)(.*)", "dest": "/api/$1$2" },
-    { "src": "/login(.*)",   "dest": "/api/login.php$1" },
-    { "src": "/logout(.*)",  "dest": "/api/logout.php$1" },
-    { "src": "/add(.*)",     "dest": "/api/add.php$1" },
-    { "src": "/view(.*)",    "dest": "/api/view.php$1" },
-    { "src": "/edit(.*)",    "dest": "/api/edit.php$1" },
-    { "src": "/delete(.*)",  "dest": "/api/delete.php$1" },
-    { "src": "/(.*)",        "dest": "/api/index.php" }
+  "rewrites": [
+    { "source": "/login",   "destination": "/api/login.php" },
+    { "source": "/logout",  "destination": "/api/logout.php" },
+    { "source": "/add",     "destination": "/api/add.php" },
+    { "source": "/view",    "destination": "/api/view.php" },
+    { "source": "/edit",    "destination": "/api/edit.php" },
+    { "source": "/delete",  "destination": "/api/delete.php" },
+    { "source": "/",        "destination": "/api/index.php" }
   ]
 }
