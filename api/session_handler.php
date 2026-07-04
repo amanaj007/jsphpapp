@@ -65,7 +65,6 @@ function safe_redirect($url) {
 }
 
 function start_db_session() {
-    ob_start();
     $handler = new DBSessionHandler();
     session_set_save_handler($handler, true);
     session_set_cookie_params([
