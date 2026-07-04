@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once 'db_pdo.php';
+require_once __DIR__ . '/session_handler.php';
+start_db_session();
 
 $profile_id = intval($_GET['profile_id'] ?? 0);
 if ($profile_id < 1) {

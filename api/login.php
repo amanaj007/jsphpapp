@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once 'db_pdo.php';
+require_once __DIR__ . '/session_handler.php';
+start_db_session();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');

@@ -1,6 +1,6 @@
 <?php
-session_start();
-require_once 'db_pdo.php';
+require_once __DIR__ . '/session_handler.php';
+start_db_session();
 
 if (!isset($_SESSION['user_id'])) {
     die('Not logged in');
