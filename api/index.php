@@ -21,7 +21,7 @@ if (isset($_SESSION['flash'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Database - 4c414f1e</title>
+    <title>Profile Database - Aman Kumar Jaiswal</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 20px; background: #f5f5f5; }
         h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
