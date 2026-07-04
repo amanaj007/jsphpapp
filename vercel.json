@@ -5,13 +5,13 @@
     }
   },
   "routes": [
-    { "src": "/api/(.*\\.php)", "dest": "/api/$1" },
-    { "src": "/login",   "dest": "/api/login.php" },
-    { "src": "/logout",  "dest": "/api/logout.php" },
-    { "src": "/add",     "dest": "/api/add.php" },
-    { "src": "/view",    "dest": "/api/view.php" },
-    { "src": "/edit",    "dest": "/api/edit.php" },
-    { "src": "/delete",  "dest": "/api/delete.php" },
-    { "src": "/",        "dest": "/api/index.php" }
+    { "src": "/api/(.*\\.php)(.*)", "dest": "/api/$1$2" },
+    { "src": "/login(.*)",   "dest": "/api/login.php$1" },
+    { "src": "/logout(.*)",  "dest": "/api/logout.php$1" },
+    { "src": "/add(.*)",     "dest": "/api/add.php$1" },
+    { "src": "/view(.*)",    "dest": "/api/view.php$1" },
+    { "src": "/edit(.*)",    "dest": "/api/edit.php$1" },
+    { "src": "/delete(.*)",  "dest": "/api/delete.php$1" },
+    { "src": "/(.*)",        "dest": "/api/index.php" }
   ]
 }
