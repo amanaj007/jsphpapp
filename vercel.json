@@ -11,6 +11,6 @@
     { "source": "/view",    "destination": "/api/view.php" },
     { "source": "/edit",    "destination": "/api/edit.php" },
     { "source": "/delete",  "destination": "/api/delete.php" },
-    { "source": "/",        "destination": "/api/index.php" }
+    { "source": "/(.*)",    "destination": "/api/index.php" }
   ]
 }
