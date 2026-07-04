@@ -17,16 +17,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (strlen($first_name) < 1 || strlen($last_name) < 1 || strlen($email) < 1
         || strlen($headline) < 1 || strlen($summary) < 1) {
         $_SESSION['flash_error'] = 'All fields are required';
-        ob_end_clean();
-        header('Location: /add');
-        exit();
+        safe_redirect('/add');
     }
 
     if (strpos($email, '@') === false) {
         $_SESSION['flash_error'] = 'Email address must contain @';
-        ob_end_clean();
-        header('Location: /add');
-        exit();
+        safe_redirect('/add');
     }
 
     $pdo  = getPDO();
@@ -43,9 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ]);
 
     $_SESSION['flash'] = 'Profile added successfully';
-    ob_end_clean();
-    header('Location: /');
-    exit();
+    safe_redirect('/');
 }
 
 $flash_error = '';

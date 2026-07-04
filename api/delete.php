@@ -27,9 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([':pid' => $profile_id, ':uid' => $_SESSION['user_id']]);
 
     $_SESSION['flash'] = 'Profile deleted successfully';
-    ob_end_clean();
-    header('Location: /');
-    exit();
+    safe_redirect('/');
 }
 
 // GET request - show confirmation screen

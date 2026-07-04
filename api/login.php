@@ -8,16 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (strlen($email) < 1 || strlen($pass) < 1) {
         $_SESSION['flash_error'] = 'Both fields are required';
-        ob_end_clean();
-        header('Location: /login');
-        exit();
+        safe_redirect('/login');
     }
 
     if (strpos($email, '@') === false) {
         $_SESSION['flash_error'] = 'Please enter a valid email address';
-        ob_end_clean();
-        header('Location: /login');
-        exit();
+        safe_redirect('/login');
     }
 
     $pdo   = getPDO();
@@ -30,14 +26,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($row !== false) {
         $_SESSION['name']    = $row['name'];
         $_SESSION['user_id'] = $row['user_id'];
-        ob_end_clean();
-        header('Location: /');
-        exit();
+        safe_redirect('/');
     } else {
         $_SESSION['flash_error'] = 'Incorrect email or password';
-        ob_end_clean();
-        header('Location: /login');
-        exit();
+        safe_redirect('/login');
     }
 }
 

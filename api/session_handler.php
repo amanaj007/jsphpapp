@@ -56,6 +56,14 @@ class DBSessionHandler implements SessionHandlerInterface {
     }
 }
 
+function safe_redirect($url) {
+    while (ob_get_level() > 0) {
+        ob_end_clean();
+    }
+    header('Location: ' . $url);
+    exit();
+}
+
 function start_db_session() {
     ob_start();
     $handler = new DBSessionHandler();
