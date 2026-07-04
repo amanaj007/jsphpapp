@@ -21,7 +21,7 @@ if (isset($_SESSION['flash'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Database - AJ007</title>
+    <title>Profile Database - 4c414f1e</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 900px; margin: 30px auto; padding: 0 20px; background: #f5f5f5; }
         h1 { color: #333; border-bottom: 2px solid #007bff; padding-bottom: 10px; }
@@ -53,7 +53,7 @@ if (isset($_SESSION['flash'])) {
             Logged in as <strong><?php echo htmlentities($_SESSION['name']); ?></strong> |
             <a href="/logout">Logout</a>
         <?php else: ?>
-            <a href="/login">Login</a>
+            <a href="/login">Please log in</a>
         <?php endif; ?>
     </div>
     <?php if (isset($_SESSION['user_id'])): ?>

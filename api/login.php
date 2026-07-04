@@ -48,7 +48,7 @@ if (isset($_SESSION['flash_error'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Profile Database - AJ007</title>
+    <title>Login - Profile Database - 4c414f1e</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 400px; margin: 80px auto; padding: 0 20px; background: #f5f5f5; }
         h1 { color: #333; text-align: center; }
