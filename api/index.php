@@ -51,13 +51,13 @@ if (isset($_SESSION['flash'])) {
     <div>
         <?php if (isset($_SESSION['user_id'])): ?>
             Logged in as <strong><?php echo htmlentities($_SESSION['name']); ?></strong> |
-            <a href="logout.php">Logout</a>
+            <a href="/logout">Logout</a>
         <?php else: ?>
-            <a href="login.php">Login</a>
+            <a href="/login">Login</a>
         <?php endif; ?>
     </div>
     <?php if (isset($_SESSION['user_id'])): ?>
-        <a class="btn-add" href="add.php">+ Add New Profile</a>
+        <a class="btn-add" href="/add">+ Add New Profile</a>
     <?php endif; ?>
 </div>
 
@@ -66,7 +66,7 @@ if (isset($_SESSION['flash'])) {
 <?php endif; ?>
 
 <?php if (count($profiles) === 0): ?>
-    <p class="empty-msg">No profiles found. <?php if (isset($_SESSION['user_id'])): ?><a href="add.php">Add the first one!</a><?php endif; ?></p>
+    <p class="empty-msg">No profiles found. <?php if (isset($_SESSION['user_id'])): ?><a href="/add">Add the first one!</a><?php endif; ?></p>
 <?php else: ?>
 <table>
     <thead>
@@ -84,10 +84,10 @@ if (isset($_SESSION['flash'])) {
             <td><?php echo htmlentities($row['email']); ?></td>
             <td><?php echo htmlentities($row['headline']); ?></td>
             <td class="actions">
-                <a class="btn-view" href="view.php?profile_id=<?php echo intval($row['profile_id']); ?>">View</a>
+                <a class="btn-view" href="/view?profile_id=<?php echo intval($row['profile_id']); ?>">View</a>
                 <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $row['user_id']): ?>
-                    <a class="btn-edit" href="edit.php?profile_id=<?php echo intval($row['profile_id']); ?>">Edit</a>
-                    <a class="btn-delete" href="delete.php?profile_id=<?php echo intval($row['profile_id']); ?>">Delete</a>
+                    <a class="btn-edit" href="/edit?profile_id=<?php echo intval($row['profile_id']); ?>">Edit</a>
+                    <a class="btn-delete" href="/delete?profile_id=<?php echo intval($row['profile_id']); ?>">Delete</a>
                 <?php endif; ?>
             </td>
         </tr>

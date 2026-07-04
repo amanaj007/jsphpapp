@@ -8,13 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (strlen($email) < 1 || strlen($pass) < 1) {
         $_SESSION['flash_error'] = 'Both fields are required';
-        header('Location: login.php');
+        header('Location: /login');
         exit();
     }
 
     if (strpos($email, '@') === false) {
         $_SESSION['flash_error'] = 'Please enter a valid email address';
-        header('Location: login.php');
+        header('Location: /login');
         exit();
     }
 
@@ -28,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($row !== false) {
         $_SESSION['name']    = $row['name'];
         $_SESSION['user_id'] = $row['user_id'];
-        header('Location: index.php');
+        header('Location: /');
         exit();
     } else {
         $_SESSION['flash_error'] = 'Incorrect email or password';
-        header('Location: login.php');
+        header('Location: /login');
         exit();
     }
 }
@@ -95,7 +95,7 @@ if (isset($_SESSION['flash_error'])) {
     <?php if ($flash_error): ?>
         <div class="flash-error"><?php echo htmlentities($flash_error); ?></div>
     <?php endif; ?>
-    <form method="POST" action="login.php">
+    <form method="POST" action="/login">
         <label for="id_email">Email Address</label>
         <input type="text" name="email" id="id_email" placeholder="you@example.com">
 
@@ -105,6 +105,6 @@ if (isset($_SESSION['flash_error'])) {
         <input type="submit" onclick="return doValidate();" value="Log In">
     </form>
 </div>
-<div class="back-link"><a href="index.php">&larr; Back to Profiles</a></div>
+<div class="back-link"><a href="/">&larr; Back to Profiles</a></div>
 </body>
 </html>
