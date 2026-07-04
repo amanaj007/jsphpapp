@@ -57,7 +57,7 @@ if (isset($_SESSION['flash'])) {
         <?php endif; ?>
     </div>
     <?php if (isset($_SESSION['user_id'])): ?>
-        <a class="btn-add" href="/add">+ Add New Profile</a>
+        <a class="btn-add" href="/add">Add New Entry</a>
     <?php endif; ?>
 </div>
 
