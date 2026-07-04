@@ -90,7 +90,7 @@ if (isset($_SESSION['flash_error'])) {
         <label for="summary">Summary</label>
         <textarea name="summary" id="summary"></textarea>
 
-        <input type="submit" value="Add Profile">
+        <input type="submit" value="Add">
     </form>
 </div>
 <div class="back-link"><a href="/">&larr; Back to Profiles</a></div>
